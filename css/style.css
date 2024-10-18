@@ -5,7 +5,7 @@
   }
   
   @font-face {
-    font-family: 'MyCustomFont';
+    font-family: 'Metafora';
     src: url('../fonts/Metafora-BlackExtraExpObliq.woff2') format('woff2'),
          url('../fonts/Metafora-BlackExtraExpObliq.woff') format('woff');
     font-weight: normal;
@@ -50,6 +50,11 @@
   nav a:hover {
     color: black;
     transition: all ease 0.5s;
+  }
+
+  /* Logo */
+  .logo {
+    font-family: "Metafora";
   }
   
   /* Responsive media query */
