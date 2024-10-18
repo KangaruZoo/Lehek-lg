@@ -4,6 +4,14 @@
     box-sizing: border-box;
   }
   
+  @font-face {
+    font-family: 'MyCustomFont';
+    src: url('../fonts/Metafora-BlackExtraExpObliq.woff2') format('woff2'),
+         url('../fonts/Metafora-BlackExtraExpObliq.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
   html,
   body {
     width: 100%;
