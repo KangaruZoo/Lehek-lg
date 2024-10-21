@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Metafora';
-  src: url('../fonts/Metafora-BlackExtraExpObliq.woff2') format('woff2'),
-       url('../fonts/Metafora-BlackExtraExpObliq.woff') format('woff');
+  src: url('/Fonts/Metafora-BlackExtraExpObliq.woff2') format('woff2'),
+       url('Fonts/Metafora-BlackExtraExpObliq.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -18,13 +18,15 @@ body {
 
 .container {
   max-width: 1050px;
-  width: 90%;
+  width: 99%;
   margin: auto;
+
 }
 
 .navbar {
   width: 100%;
   box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+  background-color: hsla(173, 70%, 55%, 0.3);
 }
 
 .nav-container {
@@ -149,3 +151,20 @@ body {
 .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
   transform: rotate(-45deg);
 }
+.main {
+  display:flex;
+  gap: 160px;
+  background-color: hsla(173, 60%, 72%, 0.3);
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.list-container {
+  display:table-column;
+  max-width: 99%;
+}
+.form-group label {
+  display:block;
+  margin-bottom: 5px;
+}
+
