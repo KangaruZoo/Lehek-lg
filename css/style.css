@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Metafora';
-  src: url('/Fonts/Metafora-BlackExtraExpObliq.woff2') format('woff2'),
-       url('Fonts/Metafora-BlackExtraExpObliq.woff') format('woff');
+  src: url('../fonts/Metafora-BlackExtraExpObliq.woff2') format('woff2'),
+       url('../fonts/Metafora-BlackExtraExpObliq.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
