@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Image Slider</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .slider { position: relative; width: 80%; max-width: 600px; margin: auto; overflow: hidden; }
+        .slides { display: flex; transition: transform 0.5s ease-in-out; }
+        .slide { min-width: 100%; box-sizing: border-box; }
+        .slide img { width: 100%; vertical-align: middle; }
+        .text { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); color: #fff; background-color: rgba(0, 0, 0, 0.5); padding: 10px; border-radius: 5px; }
+        .prev, .next { cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px; margin-top: -22px; color: white; font-weight: bold; font-size: 18px; transition: 0.6s ease; border-radius: 0 3px 3px 0; user-select: none; }
+        .next { right: 0; border-radius: 3px 0 0 3px; }
+        .prev:hover, .next:hover { background-color: rgba(0, 0, 0, 0.8); }
+    </style>
+</head>
+<body>
+
+<div class="slider">
+    <div class="slides">
+        <div class="slide">
+            <img src="https://wallpapers.com/images/featured/1920x1080-pasta-background-0qhacy4essa17rzr.jpg" alt="Dish 1">
+            <div class="text">Delicious Pasta</div>
+        </div>
+        <div class="slide">
+            <img src="https://th.bing.com/th/id/R.9b232e6eb6f4f4a485fe63e702fbff33?rik=8Sw1OxbhLMCtXw&pid=ImgRaw&r=0" alt="Dish 2">
+            <div class="text">Fresh Salad</div>
+        </div>
+        <div class="slide">
+            <img src="https://i.pinimg.com/originals/7c/57/08/7c570815314a4eaaaf730a939a404a29.jpg" alt="Dish 3">
+            <div class="text">Tasty Dessert</div>
+        </div>
+    </div>
+    <a class="prev" onclick="moveSlides(-1)">❮</a>
+    <a class="next" onclick="moveSlides(1)">❯</a>
+</div>
+
+<script>
+    let slideIndex = 0;
+    showSlides(slideIndex);
+
+    function moveSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        let slides = document.getElementsByClassName("slide");
+        if (n >= slides.length) { slideIndex = 0 }
+        if (n < 0) { slideIndex = slides.length - 1 }
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex].style.display = "block";
+    }
+</script>
+
+</body>
+</html>
