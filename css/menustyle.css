@@ -69,3 +69,48 @@ footer {
     text-align: center;
     padding: 15px 0;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fff8f0;
+    color: #333;
+}
+
+
+header {
+    position: relative;
+    background-color: #4184D6;
+    color: white;
+    padding: 70px 0 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.nav-buttons {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.nav-button {
+    display: inline-block;
+    background-color: white;
+    color: #4184D6;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin-right: 10px;
+    border: 2px solid #4184D6;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #4184D6;
+    color: white;
+}
