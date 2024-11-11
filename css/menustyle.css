@@ -77,12 +77,11 @@ body {
     color: #333;
 }
 
-/* Position the header relatively to contain absolutely positioned elements */
 header {
-    position: relative; /* Add this line */
+    position: relative;
     background-color: #b22222;
     color: white;
-    padding: 70px 0 20px; /* Increase top padding to accommodate buttons */
+    padding: 70px 0 20px;
     text-align: center;
 }
 
@@ -91,7 +90,6 @@ header h1 {
     font-size: 2.5em;
 }
 
-/* New styles for navigation buttons */
 .nav-buttons {
     position: absolute;
     top: 20px;
