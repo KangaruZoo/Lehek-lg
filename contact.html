@@ -4,27 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="./css/style.css" />
-</head>
+    <title>Taste Wonders</title>
+    <link rel="stylesheet" href="css/contact.css" />
 
+</head>
 <body>
     <nav>
         <div class="navbar">
             <div class="container nav-container">
-                <input class="checkbox" type="checkbox" name="" id="" />
+                <input class="checkbox" type="checkbox" name="navigaator" id="kast" />
                 <div class="hamburger-lines">
-                    <span class="line line1"></span>
-                    <span class="line line2"></span>
-                    <span class="line line3"></span>
+                    <ul>
+                        <li><span class="line line1"></span></li>
+                        <li><span class="line line2"></span></li>
+                        <li><span class="line line3"></span></li>
+                    </ul>
                 </div>
                 <div class="logo">
                     <h1><span style="color: #383838;">TASTE</span><span style="color: #4184D6;">WONDERS</span></h1>
                 </div>
                 <div class="menu-items">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -32,34 +36,89 @@
     <div class="main">
         <h1>TASTE WONDERS OÜ</h1>
         <div class="list-container">
-            <h2>Contact</h2>
+            <h2>Kontakt</h2>
             <ul>
-
                 <li>Number: 56748346</li>
-                <li>Mail: tastewonders@yahoo.com</li>
+                <li>meil: tastewonders@yahoo.com</li>
             </ul>
         </div>
         <div class="list-container">
-            <h2>Location</h2>
+            <h2>Asukoht</h2>
             <ul>
                 <li>Rüütli 8, Tartu</li>
             </ul>
         </div>
         <div class="list-container">
-
-            <h2>Open</h2>
+            <h2>Avatud</h2>
             <ul>
-                <li>Mon 12-22</li>
-                <li>Tue-Fri 12-23</li>
-                <li>Sat-Sun 12-22</li>
+                <li>E 12-22</li>
+                <li>T-R 12-23</li>
+                <li>L-P 12-22</li>
             </ul>
         </div>
+    </div>
 
+    <div class="contact-container">
+        <div class="form">
+            <h1>VÕTA ÜHENDUST VÕI BRONEERI</h1>
+            <form class="contact">
+                <input type="text" name="name" placeholder="Sinu nimi *" required>
+                <input type="email" name="email" placeholder="Sinu email *" required>
+                <textarea name="message" placeholder="Kommentaarid / küsimused *" required></textarea>
+                <label class="privaatsus-checkbox">
+                    Nõustun <a href="#" id="privaatsus_link">privaatsustingimustega</a> *
+                    <input type="checkbox" name="privacy" required>
+                </label>
+                <button onclick="saada()">SAADA KIRI</button>
+            </form>
+
+        </div>
+        <div class="manager">
+            <img src="manager_photo.JFIF" alt="Manager photo">
+            <h2>Svend Sakkool</h2>
+            <p>Juhataja</p>
+            <p><a href="tel:+37255583509">+372 555 83509</a></p>
+            <p><a href="email">tastewonders@yahoo.com</a></p>
+        </div>
     </div>
-    <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name">
+
+    <div id="privaatsus" class="modal">
+        <div class="modal-sisu">
+            <span class="close">&times;</span>
+            <h2>Privaatsustingimused</h2>
+            <p>
+                Teie privaatsus on meile oluline. Käesolevad privaatsustingimused kirjeldavad, kuidas me kogume, kasutame ja kaitseme teie isikuandmeid.
+            </p>
+            <p>Palun lugege hoolikalt ja nõustuge nendega enne vormi esitamist.</p>
+        </div>
     </div>
+ <!--https://www.w3schools.com/howto/howto_css_modals.asp-->
+    <script>
+        function saada() {
+            alert("Saadetud!");
+            }
+
+        const modal = document.getElementById("privaatsus");
+        const privaatsus_link = document.getElementById("privaatsus_link");
+        const close_nupp = document.querySelector(".modal .close");
+
+
+        privaatsus_link.onclick = function (event) {
+            event.preventDefault();
+            modal.style.display = "block";
+        };
+
+
+        close_nupp.onclick = function () {
+            modal.style.display = "none";
+        };
+
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+</body>
 
 </html>
-</Body>
