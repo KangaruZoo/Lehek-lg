@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/slider.css" />
+    <link rel="stylesheet" href="./css/home.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
+    <title>Home</title>
 </head>
 
 <body>
@@ -18,9 +20,42 @@
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
-            <a href="#home" class="active">Home</a>
+            <a href="index.html" class="active">Home</a>
             <a href="menu.html">Menu</a>
             <a href="contact.html">Contact</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="https://wallpapers.com/images/featured/1920x1080-pasta-background-0qhacy4essa17rzr.jpg"
+                        alt="Dish 1">
+                    <div class="text">Delicious Pasta</div>
+                </div>
+                <div class="slide">
+                    <img src="https://th.bing.com/th/id/R.9b232e6eb6f4f4a485fe63e702fbff33?rik=8Sw1OxbhLMCtXw&pid=ImgRaw&r=0"
+                        alt="Dish 2">
+                    <div class="text">Fresh Salad</div>
+                </div>
+                <div class="slide">
+                    <img src="https://i.pinimg.com/originals/7c/57/08/7c570815314a4eaaaf730a939a404a29.jpg"
+                        alt="Dish 3">
+                    <div class="text">Tasty Dessert</div>
+                </div>
+            </div>
+            <a class="prev" onclick="moveSlides(-1)">❮</a>
+            <a class="next" onclick="moveSlides(1)">❯</a>
+        </div>
+        <div class="welcome-container">
+            <h1>Tere tulemast <span class="highlight">[Restorani Nimi]</span>!</h1>
+            <p>Astuge sisse Itaalia südamesse ja laske meil viia teid maitsete rännakule, mis on täis ehtsaid maitseid,
+                sooja külalislahkust ja pisut la dolce vita’t. Olgu tegu romantilise õhtusöögi, peresündmuse või mõnusa
+                koosviibimisega sõpradega – meil on au jagada teiega oma kirge Itaalia köögi vastu.</p>
+            <p>Naudi käsitsi valmistatud pastasid, puukütteahjus küpsetatud pitsasid ja parimaid veine – kõik tehtud
+                armastuse ja kõige värskemate koostisosadega. <span class="highlight">[Restorani Nimi]</span> juures on
+                iga söögikord pidu.</p>
+            <p><strong>Mangia, Bevi, e Goditi!</strong></p>
         </div>
     </div>
 </body>

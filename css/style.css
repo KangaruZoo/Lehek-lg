@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'Metafora';
   src: url('../fonts/Metafora-BlackExtraExpObliq.woff2') format('woff2'),
-       url('../fonts/Metafora-BlackExtraExpObliq.woff') format('woff');
+    url('../fonts/Metafora-BlackExtraExpObliq.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 body {
   font-family: "Metafora";
-  margin: 0;
   background-color: #FFFFFF;
   color: #000000;
+  margin: 0;
 }
 
 .topnav {
@@ -54,11 +54,11 @@ body {
 }
 
 .topnav a:hover {
-  color: #333333;
+  color: #4184D6;
 }
 
 .topnav a.active {
-  color: #333333;
+  color: #4184D6;
 }
 
 .topnav .icon {

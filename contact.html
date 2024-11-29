@@ -6,33 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taste Wonders</title>
     <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
 </head>
+
 <body>
-    <nav>
-        <div class="navbar">
-            <div class="container nav-container">
-                <input class="checkbox" type="checkbox" name="navigaator" id="kast" />
-                <div class="hamburger-lines">
-                    <ul>
-                        <li><span class="line line1"></span></li>
-                        <li><span class="line line2"></span></li>
-                        <li><span class="line line3"></span></li>
-                    </ul>
-                </div>
-                <div class="logo">
-                    <h1><span style="color: #383838;">TASTE</span><span style="color: #4184D6;">WONDERS</span></h1>
-                </div>
-                <div class="menu-items">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="menu.html">Menu</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
+    <div class="topnav" id="myTopnav">
+        <div class="nav-left">
+            <h2><span class="taste">TASTE</span><span class="wonders">WONDERS</span></h2>
         </div>
-    </nav>
+        <div class="nav-right">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+    </div>
     <div class="main">
         <h1>TASTE WONDERS OÜ</h1>
         <div class="list-container">
@@ -87,16 +78,17 @@
             <span class="close">&times;</span>
             <h2>Privaatsustingimused</h2>
             <p>
-                Teie privaatsus on meile oluline. Käesolevad privaatsustingimused kirjeldavad, kuidas me kogume, kasutame ja kaitseme teie isikuandmeid.
+                Teie privaatsus on meile oluline. Käesolevad privaatsustingimused kirjeldavad, kuidas me kogume,
+                kasutame ja kaitseme teie isikuandmeid.
             </p>
             <p>Palun lugege hoolikalt ja nõustuge nendega enne vormi esitamist.</p>
         </div>
     </div>
- <!--https://www.w3schools.com/howto/howto_css_modals.asp-->
+    <!--https://www.w3schools.com/howto/howto_css_modals.asp-->
     <script>
         function saada() {
             alert("Saadetud!");
-            }
+        }
 
         const modal = document.getElementById("privaatsus");
         const privaatsus_link = document.getElementById("privaatsus_link");
