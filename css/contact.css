@@ -16,3 +16,8 @@
     display: block;
     margin-bottom: 5px;
 }
+.manager img {
+    width: 70%;
+    max-width: 500px;
+    height: auto;
+}
