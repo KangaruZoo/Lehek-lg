@@ -1,129 +1,295 @@
 <!DOCTYPE html>
-<html lang="est">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Taste Wonders - Menu</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TasteWonders menüü</title>
     <link rel="stylesheet" href="./css/menustyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .menu-content {
+            display: none;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .menu-column {
+            flex: 1;
+            min-width: 250px;
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .menu-item {
+            margin-bottom: 2.5rem;
+        }
+        .menu-item h3 {
+            margin-bottom: 0.15rem;
+        }
+        .menu-item p {
+            margin-top: 1rem;
+        }
+        .menu-content.active {
+            display: flex !important;
+        }
+        .menu-button.active {
+            background-color: #4184D6;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Taste Wonders</h1>
-        <nav>
-            <ul>
-                <li><a href="#eelroad">Eelroad</a></li>
-                <li><a href="#esimene">Esimene käik</a></li>
-                <li><a href="#teine">Teine käik</a></li>
-                <li><a href="#magustoit">Magustoidud</a></li>
-                <li><a href="#joogid">Joogid</a></li>
-            </ul>
-        </nav>
-        <div class="nav-buttons">
-            <a href="index.html" class="nav-button">Kodu</a>
-            <a href="menu.html" class="nav-button">Menüü</a>
-            <a href="contact.html" class="nav-button">Kontaktid</a>
+    <div class="topnav" id="myTopnav">
+        <div class="nav-left">
+            <h2><span class="taste">TASTE</span><span class="wonders">WONDERS</span></h2>
         </div>
-    </header>
+        <div class="nav-right">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="index.html">Kodu</a>
+            <a href="menu.html" class="active">Menüü</a>
+            <a href="contact.html">Kontaktid</a>
+        </div>
+    </div>
 
-    <section id="eelroad">
-        <h2>Eelroad</h2>
-        <div class="menu-item">
-            <h3>Carpaccio alla parmigiana <span>€14.00</span></h3>
-            <p>GTOORES VEISEFILEE SIDRUNI-OLIIVIÕLI, RIIVITUD PARMESANI JA RUKOLAGA</p>
+    <div class="hero">
+        <img src="./img/pasta.jpg" alt="Pizza" class="hero-image">
+        <div class="hero-text">Menüü</div>
+    </div>
+
+    <section class="menu">
+        <div class="menu-options">
+            <button class="menu-button" data-menu="toit">Toidud</button>
+            <button class="menu-button" data-menu="magus">Magustoidud ja kuumad joogid</button>
+            <button class="menu-button" data-menu="veinid">Veinid</button>
+            <button class="menu-button" data-menu="kokteilid">Kokteilid</button>
         </div>
-        <div class="menu-item">
-            <h3>Vitello tonnato <span>€14.00</span></h3>
-            <p>VEISELIHA LÕIGUD TUUNIKALA-MAJONEESI-KAPPARI KASTMES</p>
+
+        <div class="menu-content" id="toit">
+            <div class="menu-column">
+                <h2>Eelroad</h2>
+                <div class="menu-item">
+                    <h3>Carpaccio alla parmigiana <span>€14.00</span></h3>
+                    <p>TOORES VEISEFILEE SIDRUNI-OLIIVIÕLI, RIIVITUD PARMESANI JA RUKOLAGA</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Vitello tonnato <span>€14.00</span></h3>
+                    <p>VEISELIHA LÕIGUD TUUNIKALA-MAJONEESI-KAPPARI KASTMES</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Affettati misti <span>€15.00</span></h3>
+                    <p>ITAALIA LIHAVALIK</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Burrata e salmone affumicato <span>€13.00</span></h3>
+                    <p>BURRATA (VÄRSKE KOORENE MOZZARELLA), SUITSULÕHE</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Carpaccio di barbabietole <span>€8.00</span></h3>
+                    <p>KEEDETUD PEET, PÜHVLIMOZZARELLA, KREEKA PÄHKEL, RUKOLA</p>
+                </div>
+            </div>
+
+            <div class="menu-column">
+                <h2>Esimene Käik</h2>
+                <div class="menu-item">
+                    <h3>Spaghetti alla carbonara <span>€16.00</span></h3>
+                    <p>PEEKON, MUNA, VAHUKOOR, PARMESAN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Spaghetti al pesto <span>€14.00</span></h3>
+                    <p>BASIILIK, PECORINO ROMANO, PISTAATSIA PÄHKLID, SIDRUNIMAHL</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Spaghetti alla bolognese <span>€14.00</span></h3>
+                    <p>HAKKLIHA, SIBUL, PORGAND, TOMATIPASTA, VÜRTSID, PARMESAN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Lasagne <span>€16.00</span></h3>
+                    <p>KIHILINE PASTA BOLOGNESE KASTME, JUUSTU JA BEŠAMELLKASTMEGA</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Risotto gamberetti e zucchine <span>€19.00</span></h3>
+                    <p>RISOTTO KREVETTIDE, KÜÜSLAUGU, SUVIKÕRVITSA JA KOOREGA</p>
+                </div>
+            </div>
+
+            <div class="menu-column">
+                <h2>Teine Käik</h2>
+                <div class="menu-item">
+                    <h3>Filetto al gorgonzola tartufato con patate al forno <span>€32.00</span></h3>
+                    <p>VEISE SISEFILEE SINIHALLITUSJUUSTU-TRÜHVLIKASTME JA RÖSTITUD KARTULITEGA</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Filetto ai funghi porcini con patate al forno <span>€32.00</span></h3>
+                    <p>VEISE SISEFILEE KOORESE PURAVIKUKASTME, KÜÜSLAUGU JA RÖSTITUD KARTULITEGA</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Saltinbocca <span>€20.00</span></h3>
+                    <p>ÕHUKESED VEISE SISEFILEE LÕIGUD, CRUDO SINK, SALVEI, VALGE VEIN, VÕI, SOOL JA PIPAR</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Carne alla pizzaiola <span>€18.00</span></h3>
+                    <p>VEISELIHA TOMATIKASTMES KAPPARITE, OLIIVIDE, SIBULA, TŠILLI, MOZZARELLA JA PUNEGA</p>
+                </div>
+            </div>
         </div>
-        <div class="menu-item">
-            <h3>Affettati misti <span>€15.00</span></h3>
-            <p>VITAALIA LIHAVALIK</p>
+
+        <div class="menu-content" id="magus">
+            <div class="menu-column">
+                <h2>Magustoidud</h2>
+                <div class="menu-item">
+                    <h3>Fagottino al cioccolato con mascarpone <span>€6.50</span></h3>
+                    <p>TRADITSIOONILINE ITAALIA PIRUKAS ŠOKOLAADI JA MASKARPOONE JUUSTUGA</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Tiramisú <span>€6.50</span></h3>
+                    <p>POPULAARNE ITAALIA MAGUSTOIT, SERVEERITUD POKAALIS</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Panna cotta al cioccolato <span>€6.00</span></h3>
+                    <p>KOOREPUDING KUUMA TUMEDA ŠOKOLAADIGA</p>
+                </div>
+            </div>
+            <div class="menu-column">
+                <h2>Kuumad joogid</h2>
+                <div class="menu-item">
+                    <h3>Espresso corretto grappa <span>€3.00</span></h3>
+                    <p>ESPRESSO KOOS GRAPPAGA (2 CL)</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Caffé latte <span>€3.00</span></h3>
+                    <p>KOHV VAHUSTATUD PIIMAGA</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Irish Coffee <span>€5.50</span></h3>
+                    <p>KOHV IIRI VISKI JA VAHUKOOREGA</p>
+                </div>
+            </div>
         </div>
-        <div class="menu-item">
-            <h3>Burrata e salmone affumicato <span>€13.00</span></h3>
-            <p>BURRATA (VÄRSKE KOORENE MOZZARELLA), SUITSULÕHE</p>
+
+        <div class="menu-content" id="veinid">
+            <div class="menu-column">
+                <h2>Veinid</h2>
+                <div class="menu-item">
+                    <h3>Valtellina Superiore Maroggia <span>€25.00</span></h3>
+                    <p>RUBIINPUNANE, KUIV JA SIIDJAS VEIN, SUUREPÄRANE LIHA- JA JAHIROOGADEGA</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Valtellina Superiore Inferno <span>€28.00</span></h3>
+                    <p>TUGEVA ISELOOMUGA VEIN, SOBIB HÄSTI HAUTATUD LIHATOITUDE JA LAAGERDUNUD JUUSTUDE KÕRVALE</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Franciacorta Saten <span>€30.00</span></h3>
+                    <p>KULDNE JA SIIDINE VAHUVEIN, SOBIB IDEAALSELT RISOTTO JA VALGE LIHAGA</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Franciacorta Rosé <span>€32.00</span></h3>
+                    <p>PEARLROOSA, KUIV JA TASAKAALUSTATUD VAHUVEIN, SUUREPÄRANE VALGE KALA JA PASTAROOGADE JUURDE</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Barolo <span>€40.00</span></h3>
+                    <p>TÄIDLANE JA JULGE VEIN, SOBIB HÄSTI GRILLITUD LIHA JA LAAGERDUNUD JUUSTUDEGA</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Barbera d’Alba <span>€22.00</span></h3>
+                    <p>KERGE KUNI KESKMISE TÄIDLUSEGA, INTENSIIVSE MARJAMAITSEGA VEIN, SOBIB TALVISTE PASTAROOAGDE JA LIHAGA</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Dolcetto d’Acqui <span>€20.00</span></h3>
+                    <p>KUIV JA PEHME VEIN, MANDLISETE ALATOONIDEGA, SOBIB TOMATIPÕHISTE PASTADE JA KERGEMATE ROOGADEGA</p>
+                </div>
+            </div>
         </div>
-        <div class="menu-item">
-            <h3>Carpaccio di barbabietole <span>€8.00</span></h3>
-            <p>KEEDETUD PEET, PÜHVLIMOZZARELLA, KREEKA PÄHKEL, RUKOLA</p>
+
+        <div class="menu-content" id="kokteilid">
+            <div class="menu-column">
+                <h2>Kokteilid</h2>
+                <div class="menu-item">
+                    <h3>Negroni <span>€10.00</span></h3>
+                    <p>GIN, CAMPARI, MAGUS VERMUT</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Classic Bellini <span>€12.00</span></h3>
+                    <p>VIRSIKUPÜREE, PROSECCO</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Aperol Spritz <span>€9.00</span></h3>
+                    <p>APEROL, PROSECCO, GASEERITUD VESI</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Venetian Spritz <span>€11.00</span></h3>
+                    <p>SELECT APERITIVO, VAHUVEIN, ROHELINE OLIIV</p>
+                </div>
+            </div>
+            <div class="menu-column">
+                <div class="menu-item">
+                    <h3>Paper Plane <span>€12.00</span></h3>
+                    <p>BOURBON, AMARO</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Italicus Spritz <span>€13.00</span></h3>
+                    <p>ITALICUS, PROSECCO, GASEERITUD VESI</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Bicicletta Spritz <span>€10.00</span></h3>
+                    <p>KUIV VALGE VEIN, CAMPARI, GASEERITUD VESI</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Limoncello Spritz <span>€11.00</span></h3>
+                    <p>LIMONCELLO, VAHUVEIN, GASEERITUD VESI, VÄRSKE TÜÜMIAN</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="esimene">
-        <h2>Esimene käik</h2>
-        <div class="menu-item">
-            <h3>Spaghetti alla carbonara <span>€16.00</span></h3>
-            <p>PEEKON, MUNA, VAHUKOOR, PARMESAN</p>
+    <footer>
+        <div class="social-media">
+            <a href="https://www.facebook.com"><img src="./img/facebook-logo.png" alt="Facebook"></a>
+            <a href="https://www.twitter.com"><img src="./img/twitter-logo.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com"><img src="./img/instagram-logo.png" alt="Instagram"></a>
+            <a href="https://food.bolt.eu"><img src="./img/bolt-logo.png" alt="Bolt Food"></a>
         </div>
-        <div class="menu-item">
-            <h3>Spaghetti al pomodoro <span>€14.00</span></h3>
-            <p>TOMATIKASTE, VASIILIK, SIBUL, KIRSSTOMATID, PARMESAN</p>
-        </div>
-        <div class="menu-item">
-            <h3>Spaghetti alla bolognese <span>€14.00</span></h3>
-            <p>HAKKLIGA, SIBUL, PORGAND, TOMATIPASTA, VÜRTSID, PARMESAN</p>
-        </div>
-        <div class="menu-item">
-            <h3>Lasagne <span>€16.00</span></h3>
-            <p>KIHILINE PASTA BOLOGNESE KASTME, JUUSTU JA BEŠAMELLKASTMEGA</p>
-        </div>
-        <div class="menu-item">
-            <h3>Risotto gamberetti e zucchine <span>€19.00</span></h3>
-            <p>RISOTTO KREVETTIDE, KÜÜSLAUGU, SUVIKÕRVITSA JA KOOREGA</p>
-        </div>
-    </section>
+        <p>&copy; 2024 TasteWonders. Kõik õigused kaitstud</p>
+    </footer>
 
-    <section id="teine">
-        <h2>Teine käik</h2>
-        <div class="menu-item">
-            <h3>Filetto al gorgonzola tartufato con patate al forno <span>€32.00</span></h3>
-            <p>VEISE SISEFILEE SINIHALLITUSJUUSTU-TRÜHVLIKASTME JA RÖSTITUD KARTULITEGA</p>
-        </div>
-        <div class="menu-item">
-            <h3>Filetto ai funghi porcini con patate al forno <span>€32.00</span></h3>
-            <p>VEISE SISEFILEE KOORESE PURAVIKUKASTME, KÜÜSLAUGU JA RÖSTITUD KARTULITEGA</p>
-        </div>
-        <div class="menu-item">
-            <h3>Saltinbocca <span>€20.00</span></h3>
-            <p>ÕHUKESED VEISE SISEFILEE LÕIGUD, CRUDO SINK, SALVEI, VALGE VEIN, VÕI, SOOL JA PIPAR</p>
-        </div>
-        <div class="menu-item">
-            <h3>Carne alla pizzaiola <span>€18.00</span></h3>
-            <p>VEISELIHA TOMATIKASTMES KAPPARITE, OLIIVIDE, SIBULA, TŠILLI, MOZZARELLA JA PUNEGA</p>
-        </div>
-    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButtons = document.querySelectorAll('.menu-button');
+            const menuContents = document.querySelectorAll('.menu-content');
 
-    <section id="magustoit">
-        <h2>Magustoit</h2>
-        <div class="menu-item">
-            <h3>Tiramisu <span>€6.50</span></h3>
-            <p>POPULAARNE ITAALIA MAGUSTOIT, SERVEERITUD POKAALIS</p>
-        </div>
-        <div class="menu-item">
-            <h3>Panna Cotta al cioccolato <span>€6.00</span></h3>
-            <p>KOOREPUDING KUUMA TUMEDA ŠOKOLAADIGA</p>
-        </div>
-        <div class="menu-item">
-            <h3>Fagottino al cioccolato con mascarpone <span>€6.50</span></h3>
-            <p>TRADITSIOONILINE ITAALIA PIRUKAS ŠOKOLAADI JA MASKARPOONE JUUSTUGA</p>
-        </div>
-        </section>
+            function showMenu(selectedId, scroll = false) {
+                menuContents.forEach(content => {
+                    if (content.id === selectedId) {
+                        content.classList.add('active');
+                        content.style.display = 'flex';
+                        if (scroll) {
+                            content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    } else {
+                        content.classList.remove('active');
+                        content.style.display = 'none';
+                    }
+                });
+                menuButtons.forEach(button => {
+                    if (button.getAttribute('data-menu') === selectedId) {
+                        button.classList.add('active');
+                    } else {
+                        button.classList.remove('active');
+                    }
+                });
+            }
 
-    <section id="joogid">
-        <h2>Joogid</h2>
-        <div class="menu-item">
-            <h3>Espresso <span>€2.50</span></h3>
-            <p>VÄIKE KANGE TASSITÄIS</p>
-        </div>
-        <div class="menu-item">
-            <h3>Caffe latte <span>€3.00</span></h3>
-            <p>KOHV VAHUSTATUD PIIMAGA</p>
-        </div>
-        <div class="menu-item">
-            <h3>Cappuccino <span>€3.00</span></h3>
-            <p>ESPRESSO VAHUSTATUD PIIMAGA</p>
-        </div>
-        </section>
+            menuButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const selectedId = button.getAttribute('data-menu');
+                    showMenu(selectedId, true);
+                });
+            });
 
+            showMenu('toit');
+        });
+    </script>
 </body>
 </html>
